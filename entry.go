@@ -16,7 +16,7 @@ var dumpConfigFlag bool
 
 // UseConfigFile use config file to start app
 func UseConfigFile() {
-	configcentra.ConfigCentraBackend = &ConfigFileService{}
+	configcentra.ConfigCentraBackend = &ConfigFileBackend{}
 
 	appName = filepath.Base(os.Args[0])
 	if runtime.GOOS == "windows" {
